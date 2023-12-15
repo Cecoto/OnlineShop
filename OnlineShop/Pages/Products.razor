@@ -6,7 +6,7 @@
 
 <h1>Products</h1>
 
-<div class="k-card-deck">
+<div class="k-card-deck flex-center flex-wrap">
     @if (products == null)
     {
         <p><em>Loading...</em></p>
@@ -23,19 +23,43 @@
                         <CardSubTitle>Delivered on: @product.DeliveryOn.ToShortDateString()</CardSubTitle>
                     </CardHeader>
                     <CardBody>
-                        <CardImage Src="@product.ImageUrl" Height="70%" Width="80%"></CardImage>
-                        <CardActions Layout="CardActionsLayout.Center">
-                            <div class="k-flat">Price: @product.UnitPrice</div>
-                        <div class="k-flat">Quantity: @product.UnitInStock</div>
+                        <CardImage Src="@product.ImageUrl" Height="70%" Width="80%" ></CardImage>
+                        <CardSeparator></CardSeparator>
+                        <CardActions Layout="CardActionsLayout.Stretch" Orientation="CardOrientation.Vertical">
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="k-flat">Price: @product.UnitPrice lv.</TelerikButton>
+                        @if (product.UnitInStock == 0)
+                        {
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="k-flat">Out of stock</TelerikButton>
+                        }
+                        else
+                        {
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="k-flat">Quantity: @product.UnitInStock</TelerikButton>
+                        }
                     </CardActions>
                 </CardBody>
                 <CardFooter>
-                    <TelerikButton>Buy</TelerikButton>
+                    @if (product.UnitInStock == 0)
+                    {
+                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Enabled="false">Add to card</TelerikButton>
+                    }
+                    else
+                    {
+                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" class="my-button" Enabled="true">Add to card</TelerikButton>
+                    }
                 </CardFooter>
             </TelerikCard>
         }
     }
 </div>
+<style>
+    .my-button {
+        color: forestgreen;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+</style>
 @code {
     private ICollection<Product>? products;
 
