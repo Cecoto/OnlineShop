@@ -28,17 +28,7 @@ This Blazor WebAssembly application serves as a demonstration of a simple online
 
 - [Telerik UI for Blazor](https://www.telerik.com/blazor-ui)
 
-## Folder Structure
-
-- `wwwroot` - Contains static files such as images and CSS files.
-- `Pages` - Holds Blazor components for different pages.
-- `Shared` - Consists of shared components or resources.
-
 ## Resources
 
 - [Blazor Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/)
 - [Telerik UI for Blazor Documentation](https://docs.telerik.com/blazor-ui/introduction)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
