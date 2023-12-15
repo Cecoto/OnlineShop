@@ -28,11 +28,11 @@
                             <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info">Price: @product.UnitPrice lv.</TelerikButton>
                         @if (product.UnitInStock == 0)
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info">Out of stock</TelerikButton>
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info"><i class="fa-solid fa-face-frown" style="color: red;"></i>Out of stock</TelerikButton>
                         }
                         else
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info">@product.UnitInStock in stock</TelerikButton>
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info"><i class="fa-solid fa-face-smile" style="color: green;"></i>@product.UnitInStock in stock</TelerikButton>
                         }
                     </CardActions>
                 </CardBody>
@@ -40,11 +40,11 @@
                    
                         @if (product.UnitInStock == 0)
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="false">Add to card</TelerikButton>
+                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="false"> <i class="fa-solid fa-cart-shopping"></i>Add to card</TelerikButton>
                         }
                         else
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true">Add to card</TelerikButton>
+                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping" style="color: green"></i>Add to card</TelerikButton>
                         }
                    
                 </CardFooter>
@@ -92,7 +92,9 @@
         color:black;
         font-size:15px;
     }
-    
+    i{
+        margin-right:5px;
+    }
 </style>
 @code {
     private ICollection<Product>? products;
