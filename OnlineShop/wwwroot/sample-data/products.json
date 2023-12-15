@@ -3,8 +3,8 @@
     "productid": 1,
     "productname": "Chai",
     "unitinstock": 18,
-    "unitprice": 10.5,
-    "deliveryon": "2020-12-11",
+    "unitprice": 10.50,
+    "deliveryon": "2023-12-01",
     "imageurl": "/sample-data/images/chai.jpg"
   },
   {
@@ -12,7 +12,7 @@
     "productname": "Chang",
     "unitinstock": 0,
     "unitprice": 13,
-    "deliveryon": "2020-12-11",
+    "deliveryon": "2023-10-23",
     "imageurl": "/sample-data/images/Chang.jpg"
   },
   {
@@ -20,15 +20,15 @@
     "productname": "Aniseed Syrup",
     "unitinstock": 1,
     "unitprice": 6,
-    "deliveryon": "2020-12-11",
+    "deliveryon": "2023-09-11",
     "imageurl": "/sample-data/images/syrup.jpg"
   },
   {
     "productid": 4,
     "productname": "Chef Anton's Cajun Seasoning",
     "unitinstock": 10,
-    "unitprice": 11.2,
-    "deliveryon": "2020-11-13",
+    "unitprice": 11.20,
+    "deliveryon": "2023-11-13",
     "imageurl": "/sample-data/images/cajun.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "productname": "Chef Anton's Gumbo Mix",
     "unitinstock": 0,
     "unitprice": 33,
-    "deliveryon": "2020-11-13",
+    "deliveryon": "2023-11-13",
     "imageurl": "/sample-data/images/gumbo.jpg"
   },
   {
@@ -44,7 +44,7 @@
     "productname": "Grandma's Boysenberry Spread",
     "unitinstock": 5,
     "unitprice": 22,
-    "deliveryon": "2020-11-13",
+    "deliveryon": "2023-11-24",
     "imageurl": "/sample-data/images/spread.jpg"
   },
   {
@@ -52,7 +52,7 @@
     "productname": "Uncle Bob's Organic Dried Pears",
     "unitinstock": 22,
     "unitprice": 18.9,
-    "deliveryon": "2020-11-13",
+    "deliveryon": "2023-11-15",
     "imageurl": "/sample-data/images/pears.jpg"
   },
   {
@@ -60,7 +60,7 @@
     "productname": "Northwoods Cranberry Sauce",
     "unitinstock": 3,
     "unitprice": 15,
-    "deliveryon": "2020-11-22",
+    "deliveryon": "2023-11-22",
     "imageurl": "/sample-data/images/cranberry.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "productname": "Mishi Kobe Niku",
     "unitinstock": 0,
     "unitprice": 21,
-    "deliveryon": "2020-11-22",
+    "deliveryon": "2023-11-22",
     "imageurl": "/sample-data/images/beef.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "productname": "Ikura",
     "unitinstock": 13,
     "unitprice": 8,
-    "deliveryon": "2020-11-22",
+    "deliveryon": "2023-11-22",
     "imageurl": "/sample-data/images/ikura.jpg"
   }
 ]
