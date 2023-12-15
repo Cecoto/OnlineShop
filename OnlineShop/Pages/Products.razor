@@ -1,0 +1,47 @@
+﻿@page "/products"
+@using OnlineShop.Data
+@inject HttpClient Http
+
+<PageTitle>Products</PageTitle>
+
+<h1>Products</h1>
+
+<div class="k-card-deck">
+    @if (products == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+
+        foreach (var product in products)
+        {
+
+            <TelerikCard Width="300px">
+                <CardHeader>
+                    <CardTitle>@product.ProductName</CardTitle>
+                        <CardSubTitle>Delivered on: @product.DeliveryOn.ToShortDateString()</CardSubTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <CardImage Src="@product.ImageUrl" Height="70%" Width="80%"></CardImage>
+                        <CardActions Layout="CardActionsLayout.Center">
+                            <div class="k-flat">Price: @product.UnitPrice</div>
+                        <div class="k-flat">Quantity: @product.UnitInStock</div>
+                    </CardActions>
+                </CardBody>
+                <CardFooter>
+                    <TelerikButton>Buy</TelerikButton>
+                </CardFooter>
+            </TelerikCard>
+        }
+    }
+</div>
+@code {
+    private ICollection<Product>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await Http.GetFromJsonAsync<Product[]>("sample-data/products.json");
+    }
+
+}

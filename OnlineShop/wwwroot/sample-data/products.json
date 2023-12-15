@@ -1,0 +1,82 @@
+[
+  {
+    "productid": 1,
+    "productname": "Chai",
+    "unitinstock": 18,
+    "unitprice": 10.5,
+    "deliveryon": "2020-12-11",
+    "imageurl": "/sample-data/images/chai.jpg"
+  },
+  {
+    "productid": 2,
+    "productname": "Chang",
+    "unitinstock": 0,
+    "unitprice": 13,
+    "deliveryon": "2020-12-11",
+    "imageurl": "/sample-data/images/Chang.jpg"
+  },
+  {
+    "productid": 3,
+    "productname": "Aniseed Syrup",
+    "unitinstock": 1,
+    "unitprice": 6,
+    "deliveryon": "2020-12-11",
+    "imageurl": "/sample-data/images/syrup.jpg"
+  },
+  {
+    "productid": 4,
+    "productname": "Chef Anton's Cajun Seasoning",
+    "unitinstock": 10,
+    "unitprice": 11.2,
+    "deliveryon": "2020-11-13",
+    "imageurl": "/sample-data/images/cajun.jpg"
+  },
+  {
+    "productid": 5,
+    "productname": "Chef Anton's Gumbo Mix",
+    "unitinstock": 0,
+    "unitprice": 33,
+    "deliveryon": "2020-11-13",
+    "imageurl": "/sample-data/images/gumbo.jpg"
+  },
+  {
+    "productid": 6,
+    "productname": "Grandma's Boysenberry Spread",
+    "unitinstock": 5,
+    "unitprice": 22,
+    "deliveryon": "2020-11-13",
+    "imageurl": "/sample-data/images/spread.jpg"
+  },
+  {
+    "productid": 7,
+    "productname": "Uncle Bob's Organic Dried Pears",
+    "unitinstock": 22,
+    "unitprice": 18.9,
+    "deliveryon": "2020-11-13",
+    "imageurl": "/sample-data/images/pears.jpg"
+  },
+  {
+    "productid": 8,
+    "productname": "Northwoods Cranberry Sauce",
+    "unitinstock": 3,
+    "unitprice": 15,
+    "deliveryon": "2020-11-22",
+    "imageurl": "/sample-data/images/cranberry.jpg"
+  },
+  {
+    "productid": 9,
+    "productname": "Mishi Kobe Niku",
+    "unitinstock": 0,
+    "unitprice": 21,
+    "deliveryon": "2020-11-22",
+    "imageurl": "/sample-data/images/beef.jpg"
+  },
+  {
+    "productid": 10,
+    "productname": "Ikura",
+    "unitinstock": 13,
+    "unitprice": 8,
+    "deliveryon": "2020-11-22",
+    "imageurl": "/sample-data/images/ikura.jpg"
+  }
+]
