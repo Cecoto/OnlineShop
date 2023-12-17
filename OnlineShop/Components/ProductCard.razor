@@ -1,7 +1,7 @@
 ﻿
 <TelerikCard ThemeColor="@ThemeConstants.Card.ThemeColor.Info" Width="350px">
     <CardHeader>
-        <CardTitle Class="title">@Product.ProductName</CardTitle>
+        <CardTitle Class="title" >@Product.ProductName</CardTitle>
             <CardSubTitle>Delivered on: @Product.DeliveryOn.ToShortDateString()</CardSubTitle>
         </CardHeader>
         <CardBody>
@@ -31,3 +31,53 @@
 
     </CardFooter>
 </TelerikCard>
+
+
+@*
+    The following CSS styles are included directly in this Razor file due to issues
+    encountered when attempting to apply styles to Telerik components from an external
+    stylesheet. Separating the styles into an external file did not work as expected
+    with the Telerik components. Placing the styles here ensures their proper application
+    to the components within this specific context.
+*@
+<style>
+    .img {
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .my-button {
+        color: black;
+        background-color: ghostwhite;
+        padding: 10px 20px;
+        border-radius: 6px;
+    }
+
+    .info {
+        color: black;
+        font-size: 15px;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+
+    .out-stock {
+        color: red;
+    }
+
+    .in-stock {
+        color: green;
+    }
+
+    .card {
+        color: green;
+    }
+
+</style>
+

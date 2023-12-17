@@ -7,5 +7,6 @@
     {
         [Parameter]
         public Product Product { get; set; } = null!;
+     
     }
 }
