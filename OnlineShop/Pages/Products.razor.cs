@@ -6,9 +6,6 @@ namespace OnlineShop.Pages
     using System.Net.Http.Json;
     using System.Threading.Tasks;
 
-    using System.Net.NetworkInformation;
-    using OnlineShop.Data;
-
     public partial class Products
     {
         [Inject]

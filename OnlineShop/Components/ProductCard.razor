@@ -10,11 +10,11 @@
                 <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info">Price: @Product.UnitPrice BGN.</TelerikButton>
             @if (Product.UnitInStock == 0)
             {
-                <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-frown" style="color: red;"></i>Out of stock</TelerikButton>
+                <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-frown out-stock"></i>Out of stock</TelerikButton>
             }
             else
             {
-                <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-smile" style="color: green;"></i>@Product.UnitInStock in stock</TelerikButton>
+                <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-smile in-stock"></i>@Product.UnitInStock in stock</TelerikButton>
             }
         </CardActions>
     </CardBody>
@@ -26,7 +26,7 @@
         }
         else
         {
-            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping" style="color: green"></i>Add to card</TelerikButton>
+            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping card" ></i>Add to card</TelerikButton>
         }
 
     </CardFooter>
