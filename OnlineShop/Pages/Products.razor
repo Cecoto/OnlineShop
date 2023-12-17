@@ -1,7 +1,4 @@
 ﻿@page "/"
-@using OnlineShop.Data
-@inject HttpClient Http
-
 <PageTitle>Products</PageTitle>
 
 
@@ -25,14 +22,14 @@
                     <CardBody>
                         <CardImage Class="img" Src="@product.ImageUrl" Height="300px" Width="100%"></CardImage>
                         <CardActions Layout="CardActionsLayout.Stretch" Orientation="CardOrientation.Horizontal">
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info">Price: @product.UnitPrice lv.</TelerikButton>
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info">Price: @product.UnitPrice BGN.</TelerikButton>
                         @if (product.UnitInStock == 0)
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info"><i class="fa-solid fa-face-frown" style="color: red;"></i>Out of stock</TelerikButton>
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-frown" style="color: red;"></i>Out of stock</TelerikButton>
                         }
                         else
                         {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" class="info"><i class="fa-solid fa-face-smile" style="color: green;"></i>@product.UnitInStock in stock</TelerikButton>
+                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-smile" style="color: green;"></i>@product.UnitInStock in stock</TelerikButton>
                         }
                     </CardActions>
                 </CardBody>
@@ -52,56 +49,4 @@
         }
     }
 </div>
-<style>
 
-    body {
-        font-family: Calibri;
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 30px;
-        font-family: Calibri;
-        letter-spacing: 4px;
-        font-weight: 600;
-    }
-
-
-    .flex-wrap {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .img {
-        border-radius: 6px;
-        margin-bottom: 15px;
-    }
-
-    .my-button {
-        color: black;
-        background-color: ghostwhite;
-        padding:10px 20px;
-        border-radius:6px;
-    }
-    .info{
-        color:black;
-        font-size:15px;
-    }
-    i{
-        margin-right:5px;
-    }
-</style>
-@code {
-    private ICollection<Product>? products;
-
-    protected override async Task OnInitializedAsync()
-    {
-        products = await Http.GetFromJsonAsync<Product[]>("sample-data/products.json");
-    }
-
-}
