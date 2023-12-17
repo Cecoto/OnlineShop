@@ -1,7 +1,7 @@
 ﻿
 <TelerikCard ThemeColor="@ThemeConstants.Card.ThemeColor.Info" Width="350px">
     <CardHeader>
-        <CardTitle Class="title" >@Product.ProductName</CardTitle>
+        <CardTitle Class="title">@Product.ProductName</CardTitle>
             <CardSubTitle>Delivered on: @Product.DeliveryOn.ToShortDateString()</CardSubTitle>
         </CardHeader>
         <CardBody>
@@ -26,10 +26,11 @@
         }
         else
         {
-            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping card" ></i>Add to card</TelerikButton>
+            <TelerikButton OnClick="@AddNotification" FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping card"></i>Add to card</TelerikButton>
         }
 
     </CardFooter>
+    <TelerikNotification AnimationType="@AnimationType.SlideLeft" @ref="@NotificationReference" Class="MyTelerikNotification"></TelerikNotification>
 </TelerikCard>
 
 
@@ -79,5 +80,15 @@
         color: green;
     }
 
+    .MyTelerikNotification .k-notification-container .k-notification {
+        width: 300px;
+        height: 60px;
+        font-size: 1.5em;
+        text-align: center;
+        align-items: center;
+        background-color: lightgreen;
+        color:black;
+        opacity:75%;
+    }
 </style>
 
