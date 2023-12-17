@@ -13,39 +13,7 @@
 
         foreach (var product in products)
         {
-
-            <TelerikCard ThemeColor="@ThemeConstants.Card.ThemeColor.Info" Width="350px">
-                <CardHeader>
-                    <CardTitle Class="title">@product.ProductName</CardTitle>
-                        <CardSubTitle>Delivered on: @product.DeliveryOn.ToShortDateString()</CardSubTitle>
-                    </CardHeader>
-                    <CardBody>
-                        <CardImage Class="img" Src="@product.ImageUrl" Height="300px" Width="100%"></CardImage>
-                        <CardActions Layout="CardActionsLayout.Stretch" Orientation="CardOrientation.Horizontal">
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info">Price: @product.UnitPrice BGN.</TelerikButton>
-                        @if (product.UnitInStock == 0)
-                        {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-frown" style="color: red;"></i>Out of stock</TelerikButton>
-                        }
-                        else
-                        {
-                            <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Flat)" Class="info"><i class="fa-solid fa-face-smile" style="color: green;"></i>@product.UnitInStock in stock</TelerikButton>
-                        }
-                    </CardActions>
-                </CardBody>
-                <CardFooter>
-                   
-                        @if (product.UnitInStock == 0)
-                        {
-                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="false"> <i class="fa-solid fa-cart-shopping"></i>Add to card</TelerikButton>
-                        }
-                        else
-                        {
-                        <TelerikButton FillMode="@(ThemeConstants.Button.FillMode.Solid)" Class="my-button" Enabled="true"> <i class="fa-solid fa-cart-shopping" style="color: green"></i>Add to card</TelerikButton>
-                        }
-                   
-                </CardFooter>
-            </TelerikCard>
+            <OnlineShop.Components.ProductCard Product="@product"></OnlineShop.Components.ProductCard>
         }
     }
 </div>
