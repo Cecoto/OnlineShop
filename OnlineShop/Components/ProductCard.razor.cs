@@ -17,7 +17,7 @@
         {
             NotificationReference.Show(new NotificationModel()
             {
-                Text = "Product added to the shopping card.",
+                Text = "Product added to your shopping card.",
                 CloseAfter = 3000,
             }) ;
         }
